@@ -9,6 +9,8 @@ class News(models.Model):
     content = models.TextField(max_length=1000)
     news_date = models.DateField(auto_now=True)
     publish = models.BooleanField('Опубликовать', default=False)
+    cover = models.ImageField(upload_to='images/')
+   
 
     def __str__(self):
         return self.title
@@ -26,3 +28,4 @@ class CommentNews(models.Model):
     comment = models.TextField(max_length=2000, null=True)
     date = models.DateField(auto_now=True)
     news=models.ForeignKey(News, on_delete=models.CASCADE)
+    

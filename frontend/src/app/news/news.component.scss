@@ -1,0 +1,50 @@
+@import 'var';
+ @import 'mixin';
+
+.newsCard__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.newsCard__cardWrap{
+    width:calc(50% - 30px);
+   @include card;
+    height: auto;
+    min-height: 385px;
+}
+
+.newsCard__card a{
+    width: 100%;
+}
+
+.twoSection{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.filterWrap{
+    width: 30%;
+}
+
+.filter{
+    min-width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 4px 17px rgba(186, 186, 186, 0.25);
+    margin-top: 15px;
+    text-align: center;
+}
+.filter p {
+    font-size: 20px;
+}
+
+.newsCard__cardTitle h4{
+    padding: 0.5em 0;
+}
+
+.newsCard__card p{
+color: $greyColor;
+}

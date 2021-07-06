@@ -1,0 +1,6 @@
+<div *ngIf="news$ | async as news; else loading">
+{{news.title}}
+{{news.content}}
+</div>
+
+<ng-template #loading>Загрузка</ng-template>

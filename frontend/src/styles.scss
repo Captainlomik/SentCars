@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'var';
+
+
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, a{
+    font-family: 'Open Sans', sans-serif;
+    color: #111111;
+}
+
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+a{
+    font-size: 18px;
+}
+

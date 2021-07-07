@@ -4,16 +4,18 @@
       <div class="filterWrap">
           <div class="filter">
               <p>Фильтр новостей</p>
-              <input type="text" placeholder="Поиск">
+              <input type="text" placeholder="Поиск" [(ngModel)]="search"  >
               <label for="category"></label>
           </div>
       </div>
     <div class="newsCard__wrap">
-      <div class="newsCard__cardWrap" *ngFor="let new of news.results ">
+      <div class="newsCard__cardWrap" *ngFor="let new of news.results | searchNews:search">
         <div class="newsCard__card">
           <a class="newsCard__cardTitle" [routerLink]="['/news', new.id]">
+            <img src='{{new.cover}}' alt="" width=100>
             <h4>{{new.title}}</h4>
           </a>
+
           <p>{{new.content.substring(0, 150)}}</p>
           <p>{{new.news_date}}</p>
         </div>

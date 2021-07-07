@@ -21,9 +21,9 @@ export class NewsService {
     return this.http.get<News>(`${baseUrl}/${id}/`);
   }
 
-  // create(data: any): Observable<any> {
-  //   return this.http.post(baseUrl, data);
-  // }
+  create(data: News): Observable<News> {
+    return this.http.post<News>(`${baseUrl}/`, data);
+  }
 
   // update(id: any, data: any): Observable<any> {
   //   return this.http.put(`${baseUrl}/${id}`, data);

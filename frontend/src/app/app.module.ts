@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { OldCarsComponent } from './old-cars/old-cars.component';
 import { NewCarsComponent } from './new-cars/new-cars.component';
 import { SentCarComponent } from './sent-car/sent-car.component';
+import { SearchNewsPipe } from './shared/searchNews.pipe';
+import { AddNewsComponent } from './admin/news/add-news/add-news.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,17 @@ import { SentCarComponent } from './sent-car/sent-car.component';
     HeaderComponent,
     OldCarsComponent,
     NewCarsComponent,
-    SentCarComponent
+    SentCarComponent,
+    SearchNewsPipe,
+    AddNewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule, 
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

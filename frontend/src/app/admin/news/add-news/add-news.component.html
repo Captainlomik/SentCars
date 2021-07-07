@@ -1,0 +1,28 @@
+<h2>Добавить новость</h2>
+
+<form [formGroup]='addForm' (ngSubmit)="submit()">
+    <label for="title">Название новости</label>
+    <input type="text" id="title" formControlName="title">
+    <label for="content">Контент новости</label> 
+    <input type="text" id="content" formControlName="content">
+
+    <!-- <div>
+        <input type="file" name="img"  #input (change)="onFileUpload($event)">
+        <button (click)="triggerClick()" [disabled]="addForm.disabled"  type="button">
+          <i class="material-icons left">backup</i>
+          Загрузить изображение
+        </button>
+      </div> -->
+
+      <label for="file">File</label>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            (change)="onFileChange($event)">
+    
+
+            <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+    <button type="submit" [disabled]="addForm.invalid">Опубликовать</button>
+</form>

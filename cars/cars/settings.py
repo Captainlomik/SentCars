@@ -26,7 +26,8 @@ SECRET_KEY = 'rj#)==y9resx9(x@8)cl$b20m78&v$*3(lfit_g#=k8k0o_!8_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,10 +45,11 @@ INSTALLED_APPS = [
     'ad_person.apps.AdPersonConfig',
     'rest_framework',
     'corsheaders'
-
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,9 +57,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = 'cars.urls'
 
@@ -136,4 +139,4 @@ REST_FRAMEWORK = {
 
 # insta_project/settings.py
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

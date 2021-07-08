@@ -68,7 +68,7 @@ imageSrc: string
       content: this.addForm.value.content,
       news_date:new Date(),
       cover:this.image ? this.imageSrc : null,
-      publish:false
+      publish:true
     }
 
     console.log(news)

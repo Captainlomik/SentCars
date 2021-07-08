@@ -1,11 +1,15 @@
-<h2>Добавить новость</h2>
+<div class="container">
+  <h1 class="pageTittle">Добавить новость</h1>
 
-<form [formGroup]='addForm' (ngSubmit)="submit()">
-    <label for="title">Название новости</label>
-    <input type="text" id="title" formControlName="title">
-    <label for="content">Контент новости</label> 
-    <input type="text" id="content" formControlName="content">
-
+  <form [formGroup]='addForm' (ngSubmit)="submit()">
+    <div class="formGroup">
+      <label for="title">Название новости</label>
+      <input type="text" id="title" formControlName="title">
+    </div>
+    <div class="formGroup">
+      <label for="content">Контент новости</label>
+      <!-- <input type="text" id="content" formControlName="content"> -->
+    </div>
     <!-- <div>
         <input type="file" name="img"  #input (change)="onFileUpload($event)">
         <button (click)="triggerClick()" [disabled]="addForm.disabled"  type="button">
@@ -14,15 +18,13 @@
         </button>
       </div> -->
 
-      <label for="file">File</label>
-        <input 
-            formControlName="file"
-            id="file" 
-            type="file" 
-            class="form-control"
-            (change)="onFileChange($event)">
-    
+    <quill-editor class="wysiwyg" type="text" id="content" formControlName="content"></quill-editor>
 
-            <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
-    <button type="submit" [disabled]="addForm.invalid">Опубликовать</button>
-</form>
+    <label for="file">File</label>
+    <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+
+
+    <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+    <button class="btn-m-blue" type="submit" [disabled]="addForm.invalid">Опубликовать</button>
+  </form>
+</div>

@@ -62,6 +62,7 @@ class Service_auto(models.Model):
     comments = models.TextField(null=True,  blank=True)
     service = models.ForeignKey(
         Service_info, on_delete=models.CASCADE, null=True)
+    image = models.ImageField(upload_to='images/', default=' ' )
 
     def __str__(self):
         return self.name

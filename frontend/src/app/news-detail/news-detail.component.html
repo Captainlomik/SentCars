@@ -1,6 +1,18 @@
-<div *ngIf="news$ | async as news; else loading">
-{{news.title}}
-{{news.content}}
-</div>
+<div class="container">
+  <div *ngIf="news$ | async as news; else loading">
 
-<ng-template #loading>Загрузка</ng-template>
+    <h1 class="pageTittle">{{news.title}}</h1>
+
+    <div class="news">
+      <div class="news__info">
+        <a href="/news">Назад</a>
+        <p class="news__date">{{news.news_date}}</p>
+      </div>
+      <img src='{{news.cover}}' alt="" width=100%>
+      <p class="news__content">{{news.content}}</p>
+    </div>
+
+  </div>
+
+  <ng-template #loading>Загрузка</ng-template>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="pageTittle">Поддержаные машины</h1>
+    <div class="twoSection">
+        <div class="filterWrap">
+            <div class="filter">
+                <p>Фильтр машин</p>
+                <input type="text" placeholder="Поиск" [(ngModel)]="search" class="input">
+               
+            </div>
+        </div>
+      <div class="newsCard__wrap">
+        <div class="newsCard__cardWrap"  *ngFor="let car of cars.results">
+          <div class="newsCard__card">
+            <a class="newsCard__cardTitle" [routerLink]="['/auto', car.id]">
+              <!-- <img src='{{new.cover}}' alt="" width=100%> -->
+              <h4>{{car.name}}</h4> 
+            <p>{{car.price}}</p>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

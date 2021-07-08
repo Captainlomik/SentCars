@@ -1,0 +1,36 @@
+@import 'var';
+@import 'mixin';
+
+.news__date{
+    @include date;
+}
+.news img{
+    width: 50%;
+    max-width: 960px;
+    border-radius: 5px;
+}
+
+.news__content{
+    padding: 60px 0;
+    max-width: 960px;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.news__info{
+display: flex;
+align-items: center;
+padding-bottom: 10px;
+
+}
+
+.news__info a {
+    font-size: 14px;
+    color: $greyColor;
+    padding-right: 30px;
+    text-decoration: underline;
+}
+
+.news__info a:hover {
+    color: $blueColor;
+}

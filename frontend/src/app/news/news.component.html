@@ -1,23 +1,21 @@
 <div class="container">
-  <h1>Новости</h1>
+  <h1 class="pageTittle">Новости</h1>
   <div class="twoSection">
       <div class="filterWrap">
           <div class="filter">
               <p>Фильтр новостей</p>
-              <input type="text" placeholder="Поиск" [(ngModel)]="search"  >
-              <label for="category"></label>
+              <input type="text" placeholder="Поиск" [(ngModel)]="search" class="input">
+             
           </div>
       </div>
     <div class="newsCard__wrap">
-      <div class="newsCard__cardWrap" *ngFor="let new of news.results | searchNews:search">
+      <div class="newsCard__cardWrap"  *ngFor="let new of news.results | searchNews:search">
         <div class="newsCard__card">
           <a class="newsCard__cardTitle" [routerLink]="['/news', new.id]">
-            <img src='{{new.cover}}' alt="" width=100>
-            <h4>{{new.title}}</h4>
-          </a>
-
+            <img src='{{new.cover}}' alt="" width=100%>
+            <h4>{{new.title}}</h4> 
           <p>{{new.content.substring(0, 150)}}</p>
-          <p>{{new.news_date}}</p>
+        </a>
         </div>
       </div>
     </div>

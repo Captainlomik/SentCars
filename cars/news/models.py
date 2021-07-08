@@ -8,8 +8,8 @@ class News(models.Model):
     title = models.CharField(max_length=30, help_text="news title")
     content = models.TextField(max_length=1000)
     news_date = models.DateField(auto_now=True)
-    publish = models.BooleanField('Опубликовать', default=False)
-    cover = models.ImageField(upload_to='images/', default='' )
+    publish = models.BooleanField('Опубликовать', default=True)
+    cover = models.ImageField(upload_to='images/', default=' ' )
    
 
     def __str__(self):

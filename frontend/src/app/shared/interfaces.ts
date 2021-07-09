@@ -11,7 +11,7 @@ export interface NewCar{
     name:string, 
     type:string, 
     price:number, 
-    color:string, 
+    color?:string, 
     gearCase?:string, 
     Engine?:string, 
     gear?:string, 
@@ -22,14 +22,14 @@ export interface NewCar{
 export interface OldCar{
     id?:number,
     name:string, 
-     type:string, 
+    car_type:string, 
     price:number,
-    kilometrage:number, 
-    color:string, 
-    gearCase?:string, 
+    kilometrage?:number, 
+    color?:string, 
+    gear_case?:string, 
     engine?:string, 
     gear?:string, 
-    ownerCount:number,
+    owner_count?:number,
     description?:string,
     img?:File
 }

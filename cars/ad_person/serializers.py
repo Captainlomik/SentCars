@@ -18,7 +18,8 @@ class PersonAutoSerializer(serializers.HyperlinkedModelSerializer):
             'engine',
             'gear',
             'owner_count',
-            'description'
+            'description', 
+            'img'
         )
 
 class DocksSerializer(serializers.HyperlinkedModelSerializer):

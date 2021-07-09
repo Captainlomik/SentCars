@@ -16,7 +16,6 @@ export class OldCarsComponent implements OnInit {
   ngOnInit() {
     this.oldCarService.getAll().subscribe((car)=>{
       this.cars = car;
-      console.log(car)
     })
   }
 }

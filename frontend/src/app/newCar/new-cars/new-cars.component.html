@@ -8,10 +8,10 @@
                
             </div>
         </div>
-      <div class="newsCard__wrap">
-        <div class="newsCard__cardWrap"  *ngFor="let new of news.results">
-          <div class="newsCard__card">
-            <a class="newsCard__cardTitle" [routerLink]="['/news', new.id]">
+      <div class="cars__wrap">
+        <div class="cars__cardWrap"  *ngFor="let new of news.results">
+          <div class="cars__card">
+            <a class="cars__title" [routerLink]="['/news', new.id]">
               <img src='{{new.cover}}' alt="" width=100%>
               <h4>{{new.title}}</h4> 
             <p>{{new.content.substring(0, 150)}}</p>

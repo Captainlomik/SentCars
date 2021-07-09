@@ -55,6 +55,7 @@ class Person_auto(models.Model):
     description = models.TextField(null=True,  blank=True)
     owner = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True)
+    img = models.ImageField(upload_to='images/', default='')
 
     def __str__(self):
         return self.name

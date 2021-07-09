@@ -1,0 +1,27 @@
+@import 'var';
+@import 'mixin';
+
+input{ 
+    @include input;
+    width: 50%;
+}
+label{
+    display: block;
+}
+.formGroup{
+margin:20px 0;
+}
+
+.btn-m-blue{
+    @include btn-m-blue;
+    display: block;
+    margin:30px 0;
+}
+
+.wysiwyg{
+    width: 50%;
+}
+
+button:disabled{
+    opacity: 50%;
+}

@@ -1,0 +1,55 @@
+@import 'var';
+@import 'mixin';
+
+
+.car img{
+    width: 50%;
+    max-width: 960px;
+    border-radius: 5px;
+}
+
+.news__content{
+    padding: 60px 0;
+    max-width: 960px;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+
+.car a {
+    font-size: 14px;
+    color: $greyColor;
+    padding-right: 30px;
+    text-decoration: underline;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.car a:hover {
+    color: $blueColor;
+}
+
+.car__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.personInfo{
+    width: 40%;
+    @include card;
+    margin: 0;
+    margin-left:30px;
+    max-width: 100%;
+    position: sticky;
+    top:30px;
+}
+
+.personInfo p{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.car__info{
+    padding-top:60px
+}

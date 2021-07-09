@@ -1,23 +1,31 @@
 <div class="container">
-    <h1 class="pageTittle">Поддержаные машины</h1>
-    <div class="twoSection">
-        <div class="filterWrap">
-            <div class="filter">
-                <p>Фильтр машин</p>
-                <input type="text" placeholder="Поиск" [(ngModel)]="search" class="input">
-               
+  <h1 class="pageTittle">Поддержаные машины</h1>
+  <div class="twoSection">
+    <div class="filterWrap">
+      <div class="filter">
+        <p>Фильтр машин</p>
+        <input type="text" placeholder="Поиск" [(ngModel)]="search" class="input">
+
+      </div>
+    </div>
+    <div class="cardsWrap">
+      <div class="cards" *ngFor="let car of cars.results  | searchCar:search">
+        <div class="card">
+          <a class="card__src" [routerLink]="['/oldCars', car.id]">
+            <img src='{{car.img}}' alt="" width=100%>
+            <h3>{{car.name}}</h3>
+            <div class="card__info">
+              <p>Тип: {{car.car_type}}</p>
+              <p>Пробег: {{car.kilometrage}}</p>
             </div>
-        </div>
-      <div class="newsCard__wrap">
-        <div class="newsCard__cardWrap"  *ngFor="let car of cars.results">
-          <div class="newsCard__card">
-            <a class="newsCard__cardTitle" [routerLink]="['/auto', car.id]">
-              <!-- <img src='{{new.cover}}' alt="" width=100%> -->
-              <h4>{{car.name}}</h4> 
-            <p>{{car.price}}</p>
+            <div class="card__info">
+              <p>Двигатель: {{car.engine}}</p>
+              <p>Владельцев: {{car.owner_count}}</p>
+            </div>
+            <p class="card__price">{{car.price}} ₽</p>
           </a>
-          </div>
         </div>
       </div>
     </div>
   </div>
+</div>

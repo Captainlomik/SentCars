@@ -10,12 +10,14 @@ import { HeaderComponent } from './header/header.component';
 import { OldCarsComponent } from './oldCar/old-cars/old-cars.component';
 import { NewCarsComponent } from './newCar/new-cars/new-cars.component';
 import { SentCarComponent } from './sent-car/sent-car.component';
-import { SearchNewsPipe } from './shared/searchNews.pipe';
+import { SearchNewsPipe } from './shared/Pipes/searchNews.pipe';
 import { AddNewsComponent } from './admin/news/add-news/add-news.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 import { OldCarDetailComponent } from './oldCar/old-car-detail/old-car-detail.component';
-import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.component'
+import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.component';
+import { AddOldCarComponent } from './admin/cars/add-old-car/add-old-car.component'
+import { SearchCarPipe } from './shared/Pipes/car.pipe';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.co
     SearchNewsPipe,
     AddNewsComponent,
     OldCarDetailComponent,
-    NewCarDetailComponent
+    NewCarDetailComponent,
+    AddOldCarComponent,
+    SearchCarPipe 
   ],
   imports: [
     BrowserModule,

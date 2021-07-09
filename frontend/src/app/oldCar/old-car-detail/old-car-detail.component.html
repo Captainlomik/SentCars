@@ -1,1 +1,30 @@
-<p>old-car-detail works!</p>
+<div class="container">
+    <div *ngIf="cars$ | async as car; else loading">
+  
+      <h1 class="pageTittle">{{car.name}}</h1>
+  
+      <div class="car">
+        <a href="/oldCars">Назад</a>
+        <div class="car__wrap">
+            <img src='{{car.img}}' alt="" width=100%>
+            <div class="personInfo">
+               <p>Информация о владельце</p> 
+
+            </div>
+        </div>
+       <div class="car__info">
+           <h3>Информация о машине</h3>
+           <p>Тип: {{car.car_type}}</p>
+           <p>Пробег: {{car.kilometrage}}</p>
+           <p>Коробка передач: {{car.gear_case}}</p>
+           <p>Характеристики двигателя: {{car.engine}}</p>
+           <p>Привод: {{car.gear}}</p>
+           <p>Владельцев: {{car.owner_count}}</p>
+           <div>Описание: {{car.description}}</div>
+       </div>
+      </div>
+  
+    </div>
+  
+    <ng-template #loading>Загрузка</ng-template>
+  </div>

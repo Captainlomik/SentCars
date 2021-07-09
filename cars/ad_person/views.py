@@ -4,6 +4,8 @@ from rest_framework import viewsets
 from .serializers import PersonAutoSerializer, DocksSerializer, UserSerializer
 from .models import Person_auto, Dock
 from django.contrib.auth.models import User
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 # Create your views here.
 

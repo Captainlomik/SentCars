@@ -61,8 +61,6 @@ imageSrc: string
   }
 
   submit(){
-    console.log(this.image)
-   
     const news: News = {
       title : this.addForm.value.title,
       content: this.addForm.value.content,

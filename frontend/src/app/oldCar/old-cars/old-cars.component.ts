@@ -16,15 +16,26 @@ export class OldCarsComponent implements OnInit {
 
   ngOnInit() {
     this.oldCarService.getAll().subscribe((car) => {
-      this.cars = car;
+     for(let c of car){
+       if(c.status === true)
+       this.cars.push(c)
+     }
+
     })
     this.fetchProduct(this.flag)
   }
 
   fetchProduct(flag: boolean) {
-    this.oldCarService.getAll().subscribe(car => {
-      this.cars = this.sort(car, flag)
-    })
+    // this.oldCarService.getAll().subscribe(car => {
+    //   for(let c of car){
+    //     if(c.status === true)
+    //     console.log('lol')
+    //       // this.cars = this.sort(car, flag)
+    //     }
+    //   //this.cars = this.sort(car, flag)
+    // })
+
+    this.sort(this.cars, flag)
   }
 
   sort(car, flag: boolean) {

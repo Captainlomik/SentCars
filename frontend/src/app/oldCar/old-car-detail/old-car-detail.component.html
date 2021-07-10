@@ -6,9 +6,17 @@
       <div class="car">
         <a href="/oldCars">Назад</a>
         <div class="car__wrap">
-            <img src='{{car.img}}' alt="" width=100%>
+            <img src='{{car.img}}' *ngIf="car.img" alt="" width=100%>
+            <p *ngIf="!car.img"> Здесь должно быть фото машины, но его не загрузили</p>
             <div class="personInfo">
-               <p>Информация о владельце</p> 
+               <h3>Информация о владельце</h3> 
+               <div class="personInfo__info">
+                 <p>
+                 {{car.client_name}}
+                </p>
+                <a href="mailTo:{{car.client_email}}">{{car.client_email}}</a>
+                <a href="tel:{{car.client_phone}}">{{car.client_phone}}</a>
+                </div>
 
             </div>
         </div>
@@ -20,7 +28,7 @@
            <p>Характеристики двигателя: {{car.engine}}</p>
            <p>Привод: {{car.gear}}</p>
            <p>Владельцев: {{car.owner_count}}</p>
-           <div> Описание:</div>
+           <div>Описание<quill-view-html [content]="car.description"></quill-view-html></div>
        </div>
       </div>
   

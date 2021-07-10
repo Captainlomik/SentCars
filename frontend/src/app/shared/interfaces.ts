@@ -7,17 +7,17 @@ export interface News{
     image?:string
 }
 
-export interface NewCar{
-    name:string, 
-    type:string, 
-    price:number, 
-    color?:string, 
-    gearCase?:string, 
-    Engine?:string, 
-    gear?:string, 
-    comment?:string,
-    img?:File
-}
+// export interface NewCar{
+//     name:string, 
+//     type:string, 
+//     price:number, 
+//     color?:string, 
+//     gearCase?:string, 
+//     Engine?:string, 
+//     gear?:string, 
+//     comment?:string,
+//     img?:File
+// }
 
 export interface OldCar{
     id?:number,

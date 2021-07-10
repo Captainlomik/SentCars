@@ -1,0 +1,46 @@
+<app-admin-layout></app-admin-layout>
+<div class="container">
+    <h1 class="pageTittle">Поддержаные машины</h1>
+  
+    <div class="sortWrap">
+        <p>Сортировка:</p>
+        <button (click)="flag=!flag" (click)="fetchProduct(flag)">По цене</button>
+    </div>
+  
+  
+    <div class="twoSection">
+      <div class="filterWrap">
+        <div class="filter">
+          <p>Фильтр машин</p>
+          <input type="text" placeholder="Поиск" [(ngModel)]="search" class="input">
+  
+        </div>
+      </div>
+  
+      <div class="cardsWrap">
+        <div class="cards" *ngFor="let car of cars">
+          <div class="card">
+            <p *ngIf="car.status">Одобрено</p>
+            <a class="card__src" [routerLink]="['/oldCars', car.id]">
+              <img src='{{car.img}}' alt="" width=100%>
+              <h3>{{car.name}}</h3>
+              <div class="card__info">
+                <p>Тип: {{car.car_type}}</p>
+                <p>Пробег: {{car.kilometrage}}</p>
+              </div>
+              <div class="card__info">
+                <p>Двигатель: {{car.engine}}</p>
+                <p>Владельцев: {{car.owner_count}}</p>
+              </div>
+              <p class="card__price">{{car.price}} ₽</p>
+            </a>
+            <div class="buttons">
+            <button class="btn-m-blue" (click)="remove(car.id)" >Удалить</button>
+            <button  *ngIf="!car.status" class="btn-m-blue" (click)="accept(car)" >Одобрить</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

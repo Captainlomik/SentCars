@@ -44,11 +44,28 @@
     top:30px;
 }
 
-.personInfo p{
+.personInfo h3{
     font-weight: 600;
     font-size: 20px;
     text-align: center;
 }
+
+.personInfo__info{
+    width: 80%;
+    margin: 50px auto;
+}
+.personInfo__info p{
+    text-align: center;
+    margin:10px auto;
+    font-size: 18px;
+}
+.personInfo__info a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 1;
+}
+
 
 .car__info{
     padding-top:60px
@@ -59,7 +76,7 @@
     font-size: 18px;
 }
 
-.car__info div{
+.car__info div, quill-view-html p{
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: #111111;

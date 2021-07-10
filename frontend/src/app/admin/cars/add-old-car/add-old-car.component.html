@@ -1,1 +1,89 @@
-<p>add-old-car works!</p>
+<app-admin-layout></app-admin-layout>
+
+<div class="container">
+    <h1 class="pageTittle">Добавить автомобиль на продажу</h1>
+  
+    <form [formGroup]='carForm' (ngSubmit)="submit()">
+      <div class="formGroup">
+        <label for="name">Наименование машины</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+  
+      <div class="formGroup">
+        <label for="type">Тип кузова</label>
+        <select formControlName="type" id="type">
+          <option *ngFor="let type of types; let i = index" [ngValue]="type">{{type.name}}</option>
+        </select>
+      </div>
+  
+      <div class="formGroup">
+        <label for="kilometrage">Пробег</label>
+        <input type="number" id="kilometrage" formControlName="kilometrage">
+      </div>
+  
+      <div class="formGroup">
+        <label for="gear_case">Коробка передач</label>
+        <select formControlName="gear_case" id="gear_case">
+          <option *ngFor="let gear_case of gear_cases;" [ngValue]="gear_case">{{gear_case.name}}</option>
+        </select>
+      </div>
+  
+      
+      <div class="formGroup">
+        <label for="color">Цвет</label>
+        <select formControlName="color" id="color">
+          <option *ngFor="let color of colors;" [ngValue]="color">{{color.name}}</option>
+        </select>
+      </div>
+  
+      <div class="formGroup">
+        <label for="engine">Характеристики двигателя</label>
+        <input type="engine" id="engine" formControlName="engine">
+      </div>
+  
+      <div class="formGroup">
+        <label for="gear">Привод</label>
+        <select formControlName= "gear" id="gear">
+          <option *ngFor="let gear of gears;" [ngValue]="gear">{{gear.name}}</option>
+        </select>
+      </div>
+  
+      <div class="formGroup">
+        <label for="owner_count">Количество владельцев до</label>
+        <input type="number" id="owner_count" formControlName="owner_count">
+      </div>
+  
+  
+      <div class="formGroup">
+        <label for="price">Стоимость автомобиля</label>
+        <input type="number" id="price" formControlName="price">
+      </div>
+  
+  
+      <div class="formGroup">
+        <label for="description">Дополнительные сведения</label>
+        <quill-editor class="wysiwyg" type="text" id="description" formControlName="description"></quill-editor>
+      </div>
+  
+      <h3>Данные о владельце</h3>
+  
+      <div class="formGroup">
+        <label for="name">Имя</label>
+        <input type="text" id="name" formControlName="client_name">
+      </div>
+  
+      <div class="formGroup">
+        <label for="phone">Телефон</label>
+        <input type="text" id="phone" formControlName="client_phone">
+      </div>
+  
+      <div class="formGroup">
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="client_email">
+      </div>
+  
+  
+      <button class="btn-m-blue" type="submit" [disabled]="carForm.invalid">Опубликовать</button>
+    </form>
+  </div>
+  

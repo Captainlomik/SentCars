@@ -10,7 +10,7 @@ const baseUrl = 'http://127.0.0.1:8000/oldCars/auto';
 @Injectable({
   providedIn: 'root'
 })
-export class OldCarService {
+export class newCarService {
 
   constructor(private http: HttpClient) { }
 
@@ -30,9 +30,9 @@ export class OldCarService {
   //   return this.http.put(`${baseUrl}/${id}`, data);
   // }
 
-  // delete(id: any): Observable<any> {
-  //   return this.http.delete(`${baseUrl}/${id}`);
-  // }
+  delete(id: any): Observable<any> {
+    return this.http.delete(`${baseUrl}/${id}`);
+  }
 
   // deleteAll(): Observable<any> {
   //   return this.http.delete(baseUrl);

@@ -1,0 +1,22 @@
+@import 'var';
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+    margin:10px 20px;
+}
+
+ul li a:hover{
+color: $blueColor;
+}
+
+.active{
+    color:$blueColor
+}
+
+.adminMenu{
+    background: #f3f3f33a;
+}

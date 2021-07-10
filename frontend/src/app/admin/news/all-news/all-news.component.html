@@ -1,4 +1,4 @@
-
+<app-admin-layout></app-admin-layout>
 <div class="container">
     <h1 class="pageTittle">Новости</h1>
     <div class="twoSection">
@@ -10,10 +10,10 @@
             </div>
         </div>
       <div class="newsCard__wrap">
-        <div class="newsCard__cardWrap"  *ngFor="let new of news | searchNews:search">
+        <div class="newsCard__cardWrap"  *ngFor="let new of news ">
           <div class="newsCard__card">{{new.titile}}
             <a class="newsCard__cardTitle" [routerLink]="['/news', new.id]">
-              <img src='{{new.cover}}' alt="" width=100%>
+              <img src='{{new.image}}' alt="" width=100%>
               <h4>{{new.title}}</h4> 
             <p>{{new.content.substring(0, 150)}}</p>
           </a>

@@ -1,5 +1,7 @@
+import { AdminModule } from './admin/admin.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,32 +13,29 @@ import { OldCarsComponent } from './oldCar/old-cars/old-cars.component';
 import { NewCarsComponent } from './newCar/new-cars/new-cars.component';
 import { SentCarComponent } from './sent-car/sent-car.component';
 import { SearchNewsPipe } from './shared/Pipes/searchNews.pipe';
-import { AddNewsComponent } from './admin/news/add-news/add-news.component';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 import { OldCarDetailComponent } from './oldCar/old-car-detail/old-car-detail.component';
 import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.component';
 import { AddOldCarComponent } from './admin/cars/add-old-car/add-old-car.component'
 import { SearchCarPipe } from './shared/Pipes/car.pipe';
-import { AllNewsComponent } from './admin/news/all-news/all-news.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsComponent,
     NewsDetailComponent,
     HeaderComponent,
     OldCarsComponent,
     NewCarsComponent,
     SentCarComponent,
-    SearchNewsPipe,
-    AddNewsComponent,
     OldCarDetailComponent,
     NewCarDetailComponent,
-    AddOldCarComponent,
     SearchCarPipe,
-    AllNewsComponent 
+    SearchNewsPipe,
+    NewsComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +43,8 @@ import { AllNewsComponent } from './admin/news/all-news/all-news.component';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    QuillModule.forRoot(),
-
+    AdminModule,
+    QuillModule.forRoot(),   
   ],
   providers: [],
   bootstrap: [AppComponent]

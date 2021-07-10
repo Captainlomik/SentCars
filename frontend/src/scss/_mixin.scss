@@ -39,3 +39,17 @@
         border:2px solid $blueColor;
     }
 }
+
+@mixin button {
+        border-radius: 5px;
+        padding: 5px 10px;
+        border:1px solid $blueColor;
+        background-color: white;
+        cursor: pointer;
+        color: $blueColor;
+        
+    &:hover{
+        background-color: $blueColor;
+        color: white;
+    }
+}

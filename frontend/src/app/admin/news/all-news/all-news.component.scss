@@ -43,3 +43,9 @@ font-size: 16px;
 cursor: pointer;
 }
 
+.newsCard__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}

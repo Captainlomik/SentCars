@@ -4,7 +4,7 @@
       <h1 class="pageTittle">{{car.name}}</h1>
   
       <div class="car">
-        <a href="/oldCars">Назад</a>
+        <a href="/oldCars" class="previous">Назад</a>
         <div class="car__wrap">
             <img src='{{car.img}}' *ngIf="car.img" alt="" width=100%>
             <p *ngIf="!car.img"> Здесь должно быть фото машины, но его не загрузили</p>

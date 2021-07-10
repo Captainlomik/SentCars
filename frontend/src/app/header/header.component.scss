@@ -55,3 +55,9 @@ li a::after{
 li:hover a:after{
     background-color: $blueColor;
 }
+
+@media print {
+    header{
+display: none;
+    }
+}

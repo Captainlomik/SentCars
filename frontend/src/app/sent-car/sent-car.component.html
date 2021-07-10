@@ -63,6 +63,12 @@
       <quill-editor class="wysiwyg" type="text" id="description" formControlName="description"></quill-editor>
     </div>
 
+    <div class="formGroup">
+      <label for="img">Фото</label>
+      <button>Загрузить фото</button>
+    </div>
+
+    <div class="person">
     <h3>Данные о владельце</h3>
 
     <div class="formGroup">
@@ -80,7 +86,7 @@
       <input type="text" id="email" formControlName="client_email">
     </div>
 
-
+</div>
     <button class="btn-m-blue" type="submit" [disabled]="carForm.invalid">Опубликовать</button>
   </form>
 </div>

@@ -8,12 +8,6 @@
     border-radius: 5px;
 }
 
-.news__content{
-    padding: 60px 0;
-    max-width: 960px;
-    line-height: 28px;
-    font-size: 18px;
-}
 
 
 .car a {
@@ -42,6 +36,7 @@
     max-width: 100%;
     position: sticky;
     top:30px;
+    max-height: 300px;
 }
 
 .personInfo h3{
@@ -98,11 +93,31 @@
         box-shadow: none;
     }
 
-    .car a {
+    .car .previous{
         display: none;
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 
     .car__info div{
         page-break-inside: avoid;
+    }
+    
+    header{
+        display: none;
+    }
+    .personInfo{
+        width: 60%;
+    }
+    .personInfo__info{
+        width: 100%;
+    }
+
+    .car__info{
+        padding: 0;
     }
 }

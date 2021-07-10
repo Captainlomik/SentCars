@@ -22,16 +22,14 @@
           <div class="card">
             <p *ngIf="car.status">Одобрено</p>
             <a class="card__src" [routerLink]="['/oldCars', car.id]">
-              <img src='{{car.img}}' alt="" width=100%>
-              <h3>{{car.name}}</h3>
+              <img src='{{car.img}}' alt="Фото автомобиля" width=100% height="300">
+              <h3 class="card__tittle">{{car.name}}</h3>
               <div class="card__info">
-                <p>Тип: {{car.car_type}}</p>
-                <p>Пробег: {{car.kilometrage}}</p>
+                <p class="desc">Тип: {{car.car_type}}</p>
+                <p class="desc">Пробег: {{car.kilometrage}}</p>
               </div>
-              <div class="card__info">
-                <p>Двигатель: {{car.engine}}</p>
-                <p>Владельцев: {{car.owner_count}}</p>
-              </div>
+                <p class="desc">Двигатель: {{car.engine}}</p>
+                <p class="desc">Владельцев: {{car.owner_count}}</p>
               <p class="card__price">{{car.price}} ₽</p>
             </a>
             <div class="buttons">

@@ -20,7 +20,7 @@ export class AllNewsComponent implements OnInit {
 
   remove(id:any){
     this.newsService.delete(id).subscribe(()=>{
-      console.log('del')
+   this.ngOnInit()
     })
   }
 

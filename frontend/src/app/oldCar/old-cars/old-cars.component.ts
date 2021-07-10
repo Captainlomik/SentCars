@@ -9,13 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OldCarsComponent implements OnInit {
 
- 
-  cars: OldCar[] = [] 
-  constructor(private oldCarService:OldCarService) { }
+  cars: OldCar[] = []
+  flag: boolean = true
+
+  constructor(private oldCarService: OldCarService) { }
 
   ngOnInit() {
-    this.oldCarService.getAll().subscribe((car)=>{
+    this.oldCarService.getAll().subscribe((car) => {
       this.cars = car;
     })
+    this.fetchProduct(this.flag)
+  }
+
+  fetchProduct(flag: boolean) {
+    this.oldCarService.getAll().subscribe(car => {
+      this.cars = this.sort(car, flag)
+    })
+  }
+
+  sort(car, flag: boolean) {
+    car.sort(function (a, b) {
+      if (flag === true) {
+        return a.price - b.price
+      }
+      else return b.price - a.price
+    })
+    return car
   }
 }

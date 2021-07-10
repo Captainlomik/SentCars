@@ -8,6 +8,7 @@ import { News } from "../interfaces";
 
 export class SearchNewsPipe implements PipeTransform{
     transform(news:News[], search=''):News[] {
+        if(search === '') return news
         return news.filter(news=>{
             return news.title.toLocaleLowerCase().includes(search.toLocaleLowerCase().trim())
         })

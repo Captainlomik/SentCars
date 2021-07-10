@@ -14,18 +14,20 @@ export class OldCarDetailComponent implements OnInit {
 
   @Input() cars:OldCar[]= []
   cars$:Observable<OldCar>
+  lol 
 
   constructor(private carService:OldCarService, private route:ActivatedRoute) { 
 
     this.cars$ = this.route.params
       .pipe(switchMap((params: Params) => {
-        let car = this.carService.getById(params['id']);
+        let car = this.carService.getById(params['id']);  
         return car;
       }))
 
   }
 
   ngOnInit() {
+
   }
 
 }

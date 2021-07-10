@@ -53,3 +53,39 @@
 .car__info{
     padding-top:60px
 }
+
+.car__info p {
+    margin:15px 0;
+    font-size: 18px;
+}
+
+.car__info div{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #111111;
+    margin-bottom: 80px;
+}
+
+@media print {
+
+    html, body{
+        height: 297mm;
+        width: 210mm;
+    }
+
+    @page{
+        margin:20mm, 10mm, 20mm, 20mm;
+    }
+
+    .personInfo {
+        box-shadow: none;
+    }
+
+    .car a {
+        display: none;
+    }
+
+    .car__info div{
+        page-break-inside: avoid;
+    }
+}

@@ -1,5 +1,12 @@
 <div class="container">
   <h1 class="pageTittle">Поддержаные машины</h1>
+
+  <div class="sortWrap">
+      <p>Сортировка:</p>
+      <button (click)="flag=!flag" (click)="fetchProduct(flag)">По цене</button>
+  </div>
+
+
   <div class="twoSection">
     <div class="filterWrap">
       <div class="filter">
@@ -8,8 +15,9 @@
 
       </div>
     </div>
+
     <div class="cardsWrap">
-      <div class="cards" *ngFor="let car of cars.results  | searchCar:search">
+      <div class="cards" *ngFor="let car of cars | searchCar:search">
         <div class="card">
           <a class="card__src" [routerLink]="['/oldCars', car.id]">
             <img src='{{car.img}}' alt="" width=100%>

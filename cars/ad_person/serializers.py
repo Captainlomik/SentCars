@@ -19,7 +19,11 @@ class PersonAutoSerializer(serializers.HyperlinkedModelSerializer):
             'gear',
             'owner_count',
             'description', 
-            'img'
+            'img', 
+            'client_name',
+            'client_phone', 
+            'client_email', 
+            'status'
         )
 
 class DocksSerializer(serializers.HyperlinkedModelSerializer):

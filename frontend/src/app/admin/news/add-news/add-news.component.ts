@@ -27,46 +27,46 @@ imageSrc: string
     this.addForm = new FormGroup({
       title:new FormControl('', Validators.required),
       content:new FormControl('', Validators.required),
-      file: new FormControl('')
+      image: new FormControl('')
     })
   }
 
-  triggerClick() {
-    this.inputRef.nativeElement.click()
-  }
+  // triggerClick() {
+  //   this.inputRef.nativeElement.click()
+  // }
 
-  onFileUpload(event: any) {
-    this.image= event.target.files[0]
+  // onFileUpload(event: any) {
+  //   this.image= event.target.files[0]
 
-  }
+  // }
 
-  onFileChange(event) {
-    const reader = new FileReader();
+  // onFileChange(event) {
+  //   const reader = new FileReader();
     
-    if(event.target.files && event.target.files.length) {
-      const [file] = event.target.files;
-      reader.readAsDataURL(file);
+  //   if(event.target.files && event.target.files.length) {
+  //     const [file] = event.target.files;
+  //     reader.readAsDataURL(file);
     
-      reader.onload = () => {
+  //     reader.onload = () => {
    
-        this.imageSrc = reader.result as string;
+  //       this.imageSrc = reader.result as string;
      
-        this.addForm.patchValue({
-          fileSource: reader.result
-        });
+  //       this.addForm.patchValue({
+  //         fileSource: reader.result
+  //       });
    
-      };
+  //     };
    
-    }
-  }
+  //   }
+  // }
 
   submit(){
     const news: News = {
       title : this.addForm.value.title,
       content: this.addForm.value.content,
-      news_date:new Date(),
-      cover:this.image ? this.imageSrc : null,
-      publish:true
+      news_date:new Date(), 
+      publish:true, 
+      image:this.image ? this.imageSrc : null
     }
 
     console.log(news)

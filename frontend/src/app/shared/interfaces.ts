@@ -4,7 +4,7 @@ export interface News{
     content:string,
     news_date?:Date, 
     publish?:boolean,
-    cover?:string
+    image?:string
 }
 
 export interface NewCar{
@@ -31,7 +31,11 @@ export interface OldCar{
     gear?:string, 
     owner_count?:number,
     description?:string,
-    img?:File
+    img?:File, 
+    client_name:string,
+    client_phone:string, 
+    client_email:string, 
+    status:boolean
 }
 
 export interface Dock{

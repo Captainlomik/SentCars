@@ -1,3 +1,4 @@
+import { AllNewsComponent } from './admin/news/all-news/all-news.component';
 import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.component';
 import { AddNewsComponent } from './admin/news/add-news/add-news.component';
 import { SentCarComponent } from './sent-car/sent-car.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'newCars', component: NewCarsComponent },
   { path: 'newCars/:id', component:NewCarDetailComponent},
   { path: 'sentCar', component: SentCarComponent },
-  { path: 'addNews', component: AddNewsComponent }
+  { path: 'admin/addNews', component: AddNewsComponent },
+  {path:'admin/News', component:AllNewsComponent}
 ];
 
 @NgModule({

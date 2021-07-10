@@ -18,6 +18,7 @@ import { OldCarDetailComponent } from './oldCar/old-car-detail/old-car-detail.co
 import { NewCarDetailComponent } from './newCar/new-car-detail/new-car-detail.component';
 import { AddOldCarComponent } from './admin/cars/add-old-car/add-old-car.component'
 import { SearchCarPipe } from './shared/Pipes/car.pipe';
+import { AllNewsComponent } from './admin/news/all-news/all-news.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SearchCarPipe } from './shared/Pipes/car.pipe';
     OldCarDetailComponent,
     NewCarDetailComponent,
     AddOldCarComponent,
-    SearchCarPipe 
+    SearchCarPipe,
+    AllNewsComponent 
   ],
   imports: [
     BrowserModule,

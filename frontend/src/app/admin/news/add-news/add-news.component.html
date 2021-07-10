@@ -18,13 +18,13 @@
         </button>
       </div> -->
 
-    <quill-editor class="wysiwyg" type="text" id="content" formControlName="content"></quill-editor>
+    <quill-editor class="wysiwyg" formControlName="content" type="text" id="content" ></quill-editor>
 
     <label for="file">File</label>
-    <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+    <input formControlName="image" id="file" type="file" class="form-control" (change)="onFileChange($event.target.files)">
 
 
-    <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+    <!-- <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px"> -->
     <button class="btn-m-blue" type="submit" [disabled]="addForm.invalid">Опубликовать</button>
   </form>
 </div>

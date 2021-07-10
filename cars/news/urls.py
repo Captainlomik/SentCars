@@ -1,3 +1,4 @@
+from django import urls
 from django.urls import include, path
 from rest_framework import routers
 from . import views
@@ -10,7 +11,7 @@ router.register(r'news', views.NewsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ] 
 if settings.DEBUG:
     if settings.MEDIA_ROOT:
